@@ -31,7 +31,7 @@ const query1 = async (req, res) => {
             $and: [{ income: { $lt: "$5" } }, { car: { $in: ["BMW", "Mercedes"] } }],
         });
         console.log(`Found ${result.length} users`);
-        res.header("Access-Control-Allow-Origin", "*");
+        res.header("Access-Control-Allow-Origin", "https://mobilicisdataquery.netlify.app");
         res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
         res.header("Access-Control-Allow-Credentials", "true");
         res.status(200).json(result);
