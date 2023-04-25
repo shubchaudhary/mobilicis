@@ -31,7 +31,7 @@ const query1 = async (req, res) => {
             $and: [{ income: { $lt: "$5" } }, { car: { $in: ["BMW", "Mercedes"] } }],
         });
         console.log(`Found ${result.length} users`);
-        res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+        res.header("Access-Control-Allow-Origin", "*");
         res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
         res.header("Access-Control-Allow-Credentials", "true");
         res.status(200).json(result);
@@ -47,7 +47,7 @@ const query2 = async (req, res) => {
             $and: [{ gender: "Male" }, { phone_price: { $gt: "10000" } }],
         });
         console.log(`Found ${result.length} users`);
-        res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+        res.header("Access-Control-Allow-Origin", "*");
         res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
         res.header("Access-Control-Allow-Credentials", "true");
         res.status(200).json(result);
@@ -72,7 +72,7 @@ const query3 = async (req, res) => {
         });
 
         console.log(`Found ${result.length} users`);
-        res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+        res.header("Access-Control-Allow-Origin", "*");
         res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
         res.header("Access-Control-Allow-Credentials", "true");
         res.status(200).json(result);
@@ -88,7 +88,7 @@ const query4 = async (req, res) => {
             $and: [{ car: { $in: ["BMW", "Mercedes", "Audi"] } }, { email: { $not: /\d/ } }],
         });
 
-        res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+        res.header("Access-Control-Allow-Origin", "*");
         res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
         res.header("Access-Control-Allow-Credentials", "true");
         res.status(200).json(result);
@@ -123,7 +123,7 @@ const query5 = async (req, res) => {
         ]);
 
         console.log(`Found ${result.length} cities`);
-        res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+        res.header("Access-Control-Allow-Origin", "*");
         res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
         res.header("Access-Control-Allow-Credentials", "true");
         res.status(200).json(result);
