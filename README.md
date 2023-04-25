@@ -14,44 +14,44 @@ It queries the mongoDB database for the 5 queries which are:
 
 #### Get all users
 
-```http
+```
   GET /users
 ```
 
 
 #### Load data from sample_data.JSON
 
-```http
+```
   GET /user/load-data
 ```
 
 #### Get results for Query-1
 
-```http
+```
   GET /user/query1
 ```
 
 #### Get results for Query-2
 
-```http
+```
   GET /user/query2
 ```
 
 #### Get results for Query-3
 
-```http
+```
   GET /user/query3
 ```
 
 #### Get results for Query-4
 
-```http
+```
   GET /user/query4
 ```
 
 #### Get results for Query-5
 
-```http
+```
   GET /user/query5
 ```
 
