@@ -10,7 +10,7 @@ const QueryThree = () => {
 
     useEffect(() => {
         axios
-            .get("http://localhost:8080/users/query3", {
+            .get("https://mobiserver.onrender.com/users/query3", {
                 withCredentials: true,
                 headers: headers,
             })
